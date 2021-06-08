@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Webapplication7</name>
+    </assembly>
+    <members>
+        <member name="M:MyFants.Controllers.ApiController.GetUsers">
+            <summary>
+            Получить всех пользователей
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.GetProducts">
+            <summary>
+            Получить все товары
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.GetProductsWithSeller">
+            <summary>
+            Получить все товары и его продавца
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.GetCategories">
+            <summary>
+            Получить все категории
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.GetProductsList">
+            <summary>
+            Получить все имена товаров
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.GetProductList(System.String)">
+            <summary>
+            Получить товар по имени
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.AuthorizationMobile(System.String,System.String)">
+            <summary>
+            Авторизация с мобильного приложения
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.ChangeProductById(System.Int32,System.Object)">
+            <summary>
+            Изменить товар по имени
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.ChangeProductByIdCategoryByName(System.Int32,System.String)">
+            <summary>
+            Изменить товар по имени
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.ChangeCategoryByName(System.String,System.Object)">
+            <summary>
+            Изменить товар по имени
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.ChangeUserByName(System.String,System.Object)">
+            <summary>
+            Изменить пользователя по логину
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.ChangeUserById(System.Int32,System.Object)">
+            <summary>
+            Изменить пользователя по айди
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.AddProduct(System.Object)">
+            <summary>
+            Добавить товар
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.AddUser(System.Object)">
+            <summary>
+            Добавить пользователя
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.AddCategory(System.Object)">
+            <summary>
+            Добавить категорию
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.RemoveCategory(System.String,System.String)">
+            <summary>
+            Удалить товар по имени
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.RemoveProduct(System.Int32,System.String)">
+            <summary>
+            Удалить товар по id
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.RemoveUserByName(System.String)">
+            <summary>
+            Удалить пользователя по логину
+            </summary>
+        </member>
+        <member name="M:MyFants.Controllers.ApiController.RemoveUserById(System.Int32)">
+            <summary>
+            Удалить пользователя по айди
+            </summary>
+        </member>
+    </members>
+</doc>
