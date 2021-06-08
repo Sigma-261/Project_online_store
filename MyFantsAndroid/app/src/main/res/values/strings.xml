@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MyFants</string>
+    <string name="Welcome">Добро пожаловать. Вы зарегистрированы?</string>
+    <string name="Yes">Да</string>
+    <string name="No">Нет</string>
+    <string name="Enter_Login">Введите логин</string>
+    <string name="Enter_Password">Введите пароль</string>
+    <string name="Login_button">Зарегистрироваться</string>
+    <string name="Exit_button">Войти</string>
+    <string name="Add_basket_list">Добавить в корзину</string>
+    <string name="Add_fav_list">Добавить в избранное</string>
+
+    <string name="Search">Поиск</string>
+
+    <string name="ProductsList">Список товаров</string>
+    <string name="ProductsBasket">Корзина</string>
+    <string name="FavList">Избранное</string>
+    <string name="MyProductsList">Мои товары</string>
+    <string name="PublishProducts">Выложить товар</string>
+
+    <string name="Login_error">Неверный логин</string>
+    <string name="Password_error">Неверный пароль</string>
+    <string name="Server_error">Ошибка сервера</string>
+</resources>

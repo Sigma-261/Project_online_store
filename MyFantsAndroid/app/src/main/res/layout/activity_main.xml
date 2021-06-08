@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TextStyle"
+        android:text="@string/Welcome"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Yes"
+            android:textColor="@color/BLACK"
+            android:id="@+id/choose_yes"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/No"
+            android:textColor="@color/BLACK"
+            android:id="@+id/choose_no"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/error_text"
+        style="@style/TextStyleInvisible"
+        android:textColor="@color/RED" />
+
+    <TextView
+        style="@style/TextStyleInvisible"
+        android:text="@string/Enter_Login"
+        android:id="@+id/text_enter_login"
+        />
+
+    <EditText
+        style="@style/TextStyleInvisible"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/enter_login"
+        android:inputType="textCapWords"/>
+
+    <TextView
+        android:id="@+id/text_enter_password"
+        style="@style/TextStyleInvisible"
+        android:text="@string/Enter_Password" />
+
+    <EditText
+        style="@style/TextStyleInvisible"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/enter_password"
+        android:inputType="textCapWords"/>
+
+    <Button
+        style="@style/TextStyleInvisible"
+        android:text="@string/Login_button"
+        android:textSize="16sp"
+        android:id="@+id/login_button"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/login_progressbar"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
