@@ -1,4 +1,4 @@
-from MyRquests import ChangeCategory, ChangeProduct, ChangeUser, RemoveProduct, RemoveUser, addCategory, addProduct, addUser, getCategories, getProducts, getProductsWithCategoryWithSeller, getUsers, removeCategory, setProductCategory
+from MyRquests import ChangeCategory, ChangeProduct, ChangeUser, RemoveComment, RemoveProduct, RemoveUser, addCategory, addComment, addProduct, addUser, changeTextCommentById, getAllComments, getCategories, getCommentsByProductId, getOrdersWithUsers, getProducts, getProductsWithCategoryWithSeller, getUsers, removeCategory, setProductCategory
 
 def main():
 
@@ -36,6 +36,9 @@ def Administration():
         print('8) Удалить товар')
         print('9) Изменить товар')
         print('10) Добавить категорию товара')
+        print('11) Изменить текст комментария по его id')
+        print('12) Добавить комментарий к товару')
+        print('13) Удалить комментарий к товару')
         print('\nexit для закрытия программы')
         print('return для возвращения в главное меню программы')
         action = input()
@@ -70,6 +73,15 @@ def Administration():
         if action =='10':
             setProductCategory()
             input("Нажмите ВВОД для продолжения...")
+        if action =='11':
+            changeTextCommentById()
+            input("Нажмите ВВОД для продолжения...")
+        if action =='12':
+            addComment()
+            input("Нажмите ВВОД для продолжения...")
+        if action =='13':
+            RemoveComment()
+            input("Нажмите ВВОД для продолжения...")
         elif action == 'exit':
             exit
             return
@@ -87,6 +99,9 @@ def Showing():
         print('2) Просмотреть все товары, включив категорию и id продавца')
         print('3) Просмотреть все категории ')
         print('4) Просмотреть всех пользователей ')
+        print('5) Получить список всех комментариев ')
+        print('6) Получить список всех комментариев по id товара')
+        print('7) Получить список всех заказов и логины пользователей, которые их заказали')
         print('\nexit для закрытия программы')
         print('return для возвращения в главное меню программы')
         action = input()
@@ -102,6 +117,15 @@ def Showing():
             input("Нажмите ВВОД для продолжения...")
         elif action =='4':
             getUsers()
+            input("Нажмите ВВОД для продолжения...")
+        elif action =='5':
+            getAllComments()
+            input("Нажмите ВВОД для продолжения...")
+        elif action =='6':
+            getCommentsByProductId()
+            input("Нажмите ВВОД для продолжения...")
+        elif action =='7':
+            getOrdersWithUsers()
             input("Нажмите ВВОД для продолжения...")
         elif action == 'exit':
             exit

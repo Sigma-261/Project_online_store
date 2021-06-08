@@ -2,6 +2,73 @@ from prettytable import PrettyTable
 import requests
 import datetime 
 
+#Comments
+def getAllComments():
+    response = requests.get("http://myfants.fvds.ru/api/getCommentList")
+    table = PrettyTable()
+    table.field_names = ["commentid", "productid", "commetntext", "commenttime"]
+    for item in response.json()["response"]:
+        table.add_row([str(item["commentid"]), item["productid"], item["commetntext"], item["commenttime"]])
+    print(table)
+
+def getCommentsByProductId():
+    productid = input("Введите id продукта: ")
+    params = {'productid': productid}
+    response = requests.get("http://myfants.fvds.ru/api/getCommentListByProductId", params=params)
+    table = PrettyTable()
+    table.field_names = ["commentid", "productid", "commetntext", "commenttime"]
+    for item in response.json()["response"]:
+        table.add_row([str(item["commentid"]), item["productid"], item["commetntext"], item["commenttime"]])
+    print(table)
+
+def changeTextCommentById():
+    print('Ввведите id комментария, текст которого необходимо изменить')
+    idforchange = input('id: ')
+    print('ИЗМЕНЕНИЕ КОММЕНТАРИЯ')
+    text = input("Введите новый текст комментария: ")
+
+    query_params = {'text': text}
+    params = {'commentid': idforchange}
+
+    try:
+        response = requests.post("http://myfants.fvds.ru/api/changeCommentById", json=query_params, params=params)
+        print('Был изменен текст комментария ' + idforchange + ' на '+ '\"' + text + '\"')
+    except:
+        print('Произошла ошибка изменения комментария')
+
+def addComment():
+    print('Ввведите id продукта')
+    product_id = input('id продукта: ')
+    print('Ввведите текст комментария')
+    text = input('Текст: ')
+    print('Дата установится автоматически')
+
+    query_params = {'productid': product_id, 'text': text}
+    try:
+        response = requests.post("http://myfants.fvds.ru/api/addComment", json=query_params)
+        print('Был добавлен комментарий к товару ' + product_id + ' текст: '+ '\"' + text + '\"')
+    except:
+        print('Произошла ошибка добавления комментария')
+
+def RemoveComment():
+    print('Ввведите id комментария, который необходимо удалить')
+    commentid = input('id комментария: ')
+    params = {'commentid': commentid}
+
+    try:
+        response = requests.delete("http://myfants.fvds.ru/api/removeCommentById", params=params)
+        print('Был удален комментарий с id: ' + commentid)
+    except:
+        print('Произошла ошибка удаления комментария')
+
+#ORDERS
+def getOrdersWithUsers():
+    response = requests.get("http://myfants.fvds.ru/api/getOrdersWithUsers")
+    table = PrettyTable()
+    table.field_names = ["ID", "PRICE", "DATETIME", "IS_USER", "LOGIN_USER"]
+    for item in response.json()["response"]:
+        table.add_row([str(item["ID"]), str(item["PRICE"]), str(item["DATATIME"]), str(item["ID_USER"]), item["LOGIN_USER"]])
+    print(table)
 #Products
 def setProductCategory():
     print('Ввведите id товара, котегорию которого необходимо добавить')
